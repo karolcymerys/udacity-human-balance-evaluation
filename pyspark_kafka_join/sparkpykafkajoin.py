@@ -32,7 +32,7 @@ customer_json_schema = StructType([
 # create a StructType for the Kafka stedi-events topic which has the Customer Risk JSON that comes from Redis
 
 stedi_event = StructType([
-    StructField('customer', StructType()),
+    StructField('customer', StringType()),
     StructField('score', FloatType()),
     StructField('riskDate', DateType())
 ])
@@ -95,6 +95,7 @@ redis_data_df = redis_data_df \
 redis_data_df \
     .withColumn('value_json', from_json(col('value'), redis_schema)) \
     .select(col('value_json.*')) \
+    .where(col('zSetEntries').isNotNull()) \
     .createOrReplaceTempView('RedisSortedSet')
 
 
@@ -122,18 +123,20 @@ encodedCustomers = spark \
 # with this JSON format: {"customerName":"Sam Test","email":"sam.test@test.com","phone":"8015551212","birthDay":"2001-01-03"}
 
 decodedCustomers = encodedCustomers \
-    .withColumn('customer_json', unbase64(encodedCustomers.encodedCustomer).cast(StringType()))
+    .withColumn('customer_json', unbase64(col('encodedCustomer')).cast(StringType()))
 
 # parse the JSON in the Customer record and store in a temporary view called CustomerRecords
-customers_df = decodedCustomers \
+decodedCustomers \
     .withColumn('customer', from_json(col('customer_json'), customer_json_schema)) \
-
-
-# JSON parsing will set non-existent fields to null, so let's select just the fields we want, where they are not null as a new dataframe called emailAndBirthDayStreamingDF
-
-emailAndBirthDayStreamingDF = customers_df \
     .select(col('customer.*')) \
-    .dropna(how='any')
+    .createOrReplaceTempView('CustomerRecords')
+
+
+# JSON parsing will set non-existent fields to null, so let's select just the fields we want,
+# where they are not null as a new dataframe called emailAndBirthDayStreamingDF
+
+emailAndBirthDayStreamingDF = spark.sql('SELECT * FROM CustomerRecords')\
+    .dropna(how='all')
 
 # Split the birth year as a separate field from the birthday
 # Select only the birth year and email fields as a new streaming data frame called emailAndBirthYearStreamingDF
@@ -144,7 +147,8 @@ emailAndBirthYearStreamingDF = emailAndBirthDayStreamingDF \
             )
 
 # using the spark application object, read a streaming dataframe from the Kafka topic stedi-events as the source
-# Be sure to specify the option that reads all the events from the topic including those that were published before you started the spark stream
+# Be sure to specify the option that reads all the events from the topic including those
+# that were published before you started the spark stream
 
 stedi_events = spark.readStream \
     .format('kafka') \
@@ -154,7 +158,7 @@ stedi_events = spark.readStream \
     .load()
 
 
-# TO-DO: cast the value column in the streaming dataframe as a STRING
+# cast the value column in the streaming dataframe as a STRING
 stedi_events = stedi_events \
     .withColumn('value', col('value').cast(StringType()))
 
@@ -178,11 +182,11 @@ stedi_events \
     .select(col('value_json.*')) \
     .createOrReplaceTempView('CustomerRisk')
 
-# execute a sql statement against a temporary view, selecting the customer and the score from the temporary view, creating a dataframe called customerRiskStreamingDF
+# execute a sql statement against a temporary view, selecting the customer and the score from the temporary view,
+# creating a dataframe called customerRiskStreamingDF
 
 customerRiskStreamingDF = spark \
-    .sql('SELECT customer, score FROM CustomerRisk') \
-    .withColumn('customer', col('customer').cast(StringType()))
+    .sql('SELECT customer, score FROM CustomerRisk')
 
 # join the streaming dataframes on the email address to get the risk score and the birth year in the same dataframe
 final_df = customerRiskStreamingDF \
