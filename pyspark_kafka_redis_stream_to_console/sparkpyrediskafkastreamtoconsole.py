@@ -100,6 +100,7 @@ redis_data_df = redis_data_df \
 redis_data_df \
     .withColumn('value', from_json(col('value'), redis_schema)) \
     .select(col('value.*')) \
+    .where(col('zSetEntries').isNotNull()) \
     .createOrReplaceTempView('RedisSortedSet')
 
 # execute a sql statement against a temporary view, which statement takes
@@ -107,7 +108,7 @@ redis_data_df \
 # the reason we do it this way is that the syntax available select against a view is different than a dataframe,
 # and it makes it easy to select the nth element of an array in a sql column
 
-customers_df = spark.sql('SELECT zSetEntries[0].element as encodedCustomer FROM RedisSortedSet')
+customers_df = spark.sql('SELECT zSetEntries[0].element as encodedCustomer  FROM RedisSortedSet')
 
 # take the encodedCustomer column which is base64 encoded at first like this:
 # +--------------------+
@@ -146,7 +147,8 @@ emailAndBirthDayStreamingDF = spark.sql('SELECT * FROM CustomerRecords') \
 # Select only the birth year and email fields as a new streaming data frame called emailAndBirthYearStreamingDF
 
 emailAndBirthYearStreamingDF = emailAndBirthDayStreamingDF \
-    .withColumn('birthYear', split(col('birthDay').cast(StringType()), '-').getItem(0))
+    .select(col('email'),
+            split(col('birthDay').cast(StringType()), '-').getItem(0).alias('birthYear'))
 
 
 
