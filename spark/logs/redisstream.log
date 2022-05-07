@@ -1,0 +1,2669 @@
+:: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-96c662b1-4830-484d-afaa-27b1ef928d0e;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.kafka#kafka-clients;2.8.0 in central
+	found org.lz4#lz4-java;1.7.1 in central
+	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+	found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.6.2 in central
+:: resolution report :: resolve 2174ms :: artifacts dl 16ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.1 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.1 from central in [default]
+	org.apache.htrace#htrace-core4;4.1.0-incubating from central in [default]
+	org.apache.kafka#kafka-clients;2.8.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.lz4#lz4-java;1.7.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-96c662b1-4830-484d-afaa-27b1ef928d0e
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/13ms)
+22/05/07 16:19:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/07 16:19:31 INFO SparkContext: Running Spark version 3.2.1
+22/05/07 16:19:31 INFO ResourceUtils: ==============================================================
+22/05/07 16:19:31 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/07 16:19:31 INFO ResourceUtils: ==============================================================
+22/05/07 16:19:31 INFO SparkContext: Submitted application: customer-join
+22/05/07 16:19:31 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/07 16:19:31 INFO ResourceProfile: Limiting resource is cpu
+22/05/07 16:19:31 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/07 16:19:31 INFO SecurityManager: Changing view acls to: spark
+22/05/07 16:19:31 INFO SecurityManager: Changing modify acls to: spark
+22/05/07 16:19:31 INFO SecurityManager: Changing view acls groups to: 
+22/05/07 16:19:31 INFO SecurityManager: Changing modify acls groups to: 
+22/05/07 16:19:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+22/05/07 16:19:31 INFO Utils: Successfully started service 'sparkDriver' on port 42381.
+22/05/07 16:19:31 INFO SparkEnv: Registering MapOutputTracker
+22/05/07 16:19:32 INFO SparkEnv: Registering BlockManagerMaster
+22/05/07 16:19:32 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/07 16:19:32 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/07 16:19:32 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/07 16:19:32 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0e82919b-a13d-4db6-8d8d-b295eb3f45cb
+22/05/07 16:19:32 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+22/05/07 16:19:32 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/07 16:19:32 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/07 16:19:32 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+22/05/07 16:19:32 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ad5cda19b893:4041
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at spark://ad5cda19b893:42381/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at spark://ad5cda19b893:42381/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at spark://ad5cda19b893:42381/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://ad5cda19b893:42381/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at spark://ad5cda19b893:42381/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://ad5cda19b893:42381/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at spark://ad5cda19b893:42381/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at spark://ad5cda19b893:42381/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at spark://ad5cda19b893:42381/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at spark://ad5cda19b893:42381/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://ad5cda19b893:42381/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:32 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940371415
+22/05/07 16:19:32 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:33 INFO Executor: Starting executor ID driver on host ad5cda19b893
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:33 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO TransportClientFactory: Successfully created connection to ad5cda19b893/172.22.0.7:42381 after 54 ms (0 ms spent in bootstraps)
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp7780808564643239884.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp7780808564643239884.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp5742048317849071440.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp5742048317849071440.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/com.google.code.findbugs_jsr305-3.0.0.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6309291067499486181.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6309291067499486181.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.spark-project.spark_unused-1.0.0.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp3853383257137592362.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp3853383257137592362.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-api-3.3.1.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp3646259504361789671.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp3646259504361789671.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.xerial.snappy_snappy-java-1.1.8.4.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1660686294050754830.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1660686294050754830.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.slf4j_slf4j-api-1.7.30.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1698316131148862865.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1698316131148862865.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.kafka_kafka-clients-2.8.0.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1173012544571324109.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp1173012544571324109.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.commons_commons-pool2-2.6.2.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp7801025807818786150.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp7801025807818786150.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/commons-logging_commons-logging-1.1.3.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp4138765080894551570.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp4138765080894551570.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6413971260112752105.tmp
+22/05/07 16:19:33 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6413971260112752105.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:33 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.lz4_lz4-java-1.7.1.jar to class loader
+22/05/07 16:19:33 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940371415
+22/05/07 16:19:33 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6921212478619323121.tmp
+22/05/07 16:19:35 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp6921212478619323121.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:35 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to class loader
+22/05/07 16:19:35 INFO Executor: Fetching spark://ad5cda19b893:42381/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940371415
+22/05/07 16:19:35 INFO Utils: Fetching spark://ad5cda19b893:42381/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp4493704682449923867.tmp
+22/05/07 16:19:35 INFO Utils: /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/fetchFileTemp4493704682449923867.tmp has been previously copied to /tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:35 INFO Executor: Adding file:/tmp/spark-7757c068-d95b-42c5-87f4-7a7161a08e92/userFiles-8299f872-a2ea-4082-b2f1-a4a169a28ca7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to class loader
+22/05/07 16:19:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39693.
+22/05/07 16:19:35 INFO NettyBlockTransferService: Server created on ad5cda19b893:39693
+22/05/07 16:19:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/07 16:19:35 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ad5cda19b893, 39693, None)
+22/05/07 16:19:35 INFO BlockManagerMasterEndpoint: Registering block manager ad5cda19b893:39693 with 366.3 MiB RAM, BlockManagerId(driver, ad5cda19b893, 39693, None)
+22/05/07 16:19:35 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ad5cda19b893, 39693, None)
+22/05/07 16:19:35 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ad5cda19b893, 39693, None)
+22/05/07 16:19:36 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/07 16:19:36 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+22/05/07 16:19:40 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-6f20bcf9-2f4e-4bca-81c2-57ed504f0f15. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+22/05/07 16:19:40 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+---------+
+|               email|birthYear|
++--------------------+---------+
+|Travis.Abram@test...|     1965|
+|Trevor.Jones@test...|     1964|
+|Ashley.Lincoln@te...|     1963|
+|  Dan.Jones@test.com|     1962|
+|Jerry.Davis@test.com|     1961|
+|Travis.Jones@test...|     1960|
+|Travis.Howard@tes...|     1959|
+|Frank.Jefferson@t...|     1958|
+|Edward.Huey@test.com|     1957|
+|Jane.Sanchez@test...|     1956|
+|Neeraj.Anderson@t...|     1955|
+|Lyn.Aristotle@tes...|     1954|
+| Gail.Smith@test.com|     1953|
+|Bobby.Hansen@test...|     1952|
+|Angie.Khatib@test...|     1951|
+|Sarah.Gonzalez@te...|     1950|
+|Spencer.Aristotle...|     1949|
+|Trevor.Aristotle@...|     1948|
+| Eric.Doshi@test.com|     1947|
+|Trevor.Gonzalez@t...|     1946|
++--------------------+---------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 15
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 16
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 17
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 18
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 19
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 20
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 21
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 22
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 23
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 24
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 25
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 26
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 27
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 28
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 29
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 30
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 31
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 32
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 33
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 34
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 35
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 36
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 37
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 38
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 39
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 40
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 41
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 42
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 43
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 44
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 45
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 46
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 47
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 48
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 49
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 50
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 51
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 52
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 53
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 54
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 55
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 56
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 57
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 58
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 59
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 60
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 61
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 62
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 63
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 64
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 65
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 66
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 67
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 68
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 69
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 70
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 71
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 72
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 73
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 74
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 75
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 76
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 77
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 78
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 79
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 80
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 81
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 82
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 83
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 84
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 85
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 86
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 87
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 88
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 89
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 90
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 91
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 92
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 93
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 94
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 95
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 96
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 97
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 98
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 99
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 100
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 101
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 102
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 103
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 104
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 105
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 106
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 107
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 108
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 109
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 110
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 111
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 112
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 113
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 114
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 115
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 116
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 117
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 118
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 119
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 120
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 121
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 122
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 123
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 124
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 125
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 126
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 127
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 128
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 129
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 130
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 131
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 132
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 133
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 134
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 135
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 136
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 137
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 138
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 139
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 140
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 141
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 142
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 143
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 144
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 145
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 146
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 147
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 148
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 149
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 150
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 151
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 152
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 153
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 154
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 155
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 156
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 157
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 158
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 159
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 160
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 161
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 162
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 163
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 164
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 165
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 166
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 167
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 168
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 169
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 170
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 171
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 172
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 173
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 174
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 175
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 176
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 177
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 178
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 179
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 180
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 181
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 182
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 183
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 184
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 185
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 186
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 187
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 188
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 189
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 190
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 191
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 192
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 193
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 194
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 195
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 196
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 197
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 198
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 199
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 200
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 201
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 202
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 203
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 204
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 205
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 206
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 207
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 208
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 209
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 210
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 211
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 212
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 213
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 214
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 215
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 216
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 217
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 218
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 219
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 220
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 221
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 222
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 223
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 224
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 225
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 226
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 227
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 228
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 229
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 230
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 231
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 232
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 233
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 234
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 235
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 236
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 237
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 238
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 239
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 240
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 241
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 242
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 243
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 244
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 245
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 246
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 247
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 248
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 249
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 250
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 251
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 252
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 253
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 254
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 255
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 256
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 257
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 258
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 259
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 260
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 261
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 262
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 263
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 264
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 265
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 266
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 267
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 268
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 269
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 270
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 271
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 272
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 273
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 274
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 275
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 276
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 277
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 278
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 279
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 280
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 281
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 282
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 283
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 284
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 285
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 286
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 287
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 288
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 289
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 290
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 291
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 292
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 293
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 294
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 295
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 296
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 297
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 298
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 299
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+^CERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/opt/bitnami/python/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 292, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 1195, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o14.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Traceback (most recent call last):
+  File "/home/workspace/pyspark_kafka_redis_stream_to_console/sparkpyrediskafkastreamtoconsole.py", line 174, in <module>
+    emailAndBirthYearStreamingDF \
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 101, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+py4j.protocol.Py4JError: An error occurred while calling o93.awaitTermination

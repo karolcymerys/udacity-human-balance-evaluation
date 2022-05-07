@@ -1,0 +1,2505 @@
+:: loading settings :: url = jar:file:/opt/bitnami/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /opt/bitnami/spark/.ivy2/cache
+The jars for the packages stored in: /opt/bitnami/spark/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-628bcb21-d5ef-4464-a8e7-d1204c18a172;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 in central
+	found org.apache.kafka#kafka-clients;2.8.0 in central
+	found org.lz4#lz4-java;1.7.1 in central
+	found org.xerial.snappy#snappy-java;1.1.8.4 in central
+	found org.slf4j#slf4j-api;1.7.30 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.1 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.1 in central
+	found org.apache.htrace#htrace-core4;4.1.0-incubating in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.6.2 in central
+:: resolution report :: resolve 1648ms :: artifacts dl 17ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.6.2 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.1 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.1 from central in [default]
+	org.apache.htrace#htrace-core4;4.1.0-incubating from central in [default]
+	org.apache.kafka#kafka-clients;2.8.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.2.1 from central in [default]
+	org.lz4#lz4-java;1.7.1 from central in [default]
+	org.slf4j#slf4j-api;1.7.30 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.8.4 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-628bcb21-d5ef-4464-a8e7-d1204c18a172
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/15ms)
+22/05/07 16:19:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/07 16:19:36 INFO SparkContext: Running Spark version 3.2.1
+22/05/07 16:19:36 INFO ResourceUtils: ==============================================================
+22/05/07 16:19:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/07 16:19:36 INFO ResourceUtils: ==============================================================
+22/05/07 16:19:36 INFO SparkContext: Submitted application: kafka_event_stream_to_console
+22/05/07 16:19:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/07 16:19:37 INFO ResourceProfile: Limiting resource is cpu
+22/05/07 16:19:37 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/07 16:19:37 INFO SecurityManager: Changing view acls to: spark
+22/05/07 16:19:37 INFO SecurityManager: Changing modify acls to: spark
+22/05/07 16:19:37 INFO SecurityManager: Changing view acls groups to: 
+22/05/07 16:19:37 INFO SecurityManager: Changing modify acls groups to: 
+22/05/07 16:19:37 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(spark); groups with view permissions: Set(); users  with modify permissions: Set(spark); groups with modify permissions: Set()
+22/05/07 16:19:37 INFO Utils: Successfully started service 'sparkDriver' on port 38717.
+22/05/07 16:19:37 INFO SparkEnv: Registering MapOutputTracker
+22/05/07 16:19:37 INFO SparkEnv: Registering BlockManagerMaster
+22/05/07 16:19:37 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/07 16:19:37 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/07 16:19:37 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/07 16:19:37 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f6060d22-26a8-4aee-be49-49e3d1eddd4b
+22/05/07 16:19:37 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+22/05/07 16:19:37 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/07 16:19:37 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/07 16:19:37 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+22/05/07 16:19:37 INFO Utils: Successfully started service 'SparkUI' on port 4042.
+22/05/07 16:19:37 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ad5cda19b893:4042
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at spark://ad5cda19b893:38717/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at spark://ad5cda19b893:38717/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at spark://ad5cda19b893:38717/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://ad5cda19b893:38717/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at spark://ad5cda19b893:38717/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://ad5cda19b893:38717/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at spark://ad5cda19b893:38717/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at spark://ad5cda19b893:38717/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at spark://ad5cda19b893:38717/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at spark://ad5cda19b893:38717/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added JAR file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://ad5cda19b893:38717/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar at file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:37 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:37 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:38 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar at file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:38 INFO SparkContext: Added file file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: Copying /opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:38 INFO Executor: Starting executor ID driver on host ad5cda19b893
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.kafka_kafka-clients-2.8.0.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:38 INFO Executor: Fetching file:///opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: /opt/bitnami/spark/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:38 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO TransportClientFactory: Successfully created connection to ad5cda19b893/172.22.0.7:38717 after 58 ms (0 ms spent in bootstraps)
+22/05/07 16:19:38 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8870692692335241548.tmp
+22/05/07 16:19:38 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8870692692335241548.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.htrace_htrace-core4-4.1.0-incubating.jar
+22/05/07 16:19:38 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.htrace_htrace-core4-4.1.0-incubating.jar to class loader
+22/05/07 16:19:38 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:38 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp5220366051903769434.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp5220366051903769434.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-runtime-3.3.1.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp3890040261390692288.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp3890040261390692288.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-sql-kafka-0-10_2.12-3.2.1.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp2137911870047411384.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp2137911870047411384.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.commons_commons-pool2-2.6.2.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.commons_commons-pool2-2.6.2.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp5216042403174276123.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp5216042403174276123.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.lz4_lz4-java-1.7.1.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.lz4_lz4-java-1.7.1.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8404515340821356730.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8404515340821356730.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/com.google.code.findbugs_jsr305-3.0.0.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/com.google.code.findbugs_jsr305-3.0.0.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp6346793555209974616.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp6346793555209974616.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.slf4j_slf4j-api-1.7.30.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.slf4j_slf4j-api-1.7.30.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp3199180586603360550.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp3199180586603360550.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.2.1.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp9068915604695533896.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp9068915604695533896.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.spark-project.spark_unused-1.0.0.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.spark-project.spark_unused-1.0.0.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.xerial.snappy_snappy-java-1.1.8.4.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8817243274702546392.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp8817243274702546392.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.xerial.snappy_snappy-java-1.1.8.4.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.xerial.snappy_snappy-java-1.1.8.4.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.kafka_kafka-clients-2.8.0.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.kafka_kafka-clients-2.8.0.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp7467370436967803181.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp7467370436967803181.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.kafka_kafka-clients-2.8.0.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.kafka_kafka-clients-2.8.0.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/org.apache.hadoop_hadoop-client-api-3.3.1.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp6556340461764412575.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp6556340461764412575.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-api-3.3.1.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/org.apache.hadoop_hadoop-client-api-3.3.1.jar to class loader
+22/05/07 16:19:40 INFO Executor: Fetching spark://ad5cda19b893:38717/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1651940376894
+22/05/07 16:19:40 INFO Utils: Fetching spark://ad5cda19b893:38717/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp9160028586926803414.tmp
+22/05/07 16:19:40 INFO Utils: /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/fetchFileTemp9160028586926803414.tmp has been previously copied to /tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/commons-logging_commons-logging-1.1.3.jar
+22/05/07 16:19:40 INFO Executor: Adding file:/tmp/spark-55c55e4f-6bd9-425d-8357-1f6698c56109/userFiles-4104c6d1-2b90-4e7a-a195-94af139f4c12/commons-logging_commons-logging-1.1.3.jar to class loader
+22/05/07 16:19:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43243.
+22/05/07 16:19:40 INFO NettyBlockTransferService: Server created on ad5cda19b893:43243
+22/05/07 16:19:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/07 16:19:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ad5cda19b893, 43243, None)
+22/05/07 16:19:40 INFO BlockManagerMasterEndpoint: Registering block manager ad5cda19b893:43243 with 366.3 MiB RAM, BlockManagerId(driver, ad5cda19b893, 43243, None)
+22/05/07 16:19:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ad5cda19b893, 43243, None)
+22/05/07 16:19:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ad5cda19b893, 43243, None)
+22/05/07 16:19:41 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/07 16:19:41 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+22/05/07 16:19:45 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-0ff7bb17-c961-4534-b83d-609d7d7866a6. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+22/05/07 16:19:45 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------+-----+
+|customer|score|
++--------+-----+
++--------+-----+
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|-38.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...|-47.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...|  5.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|-18.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com| 31.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -5.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 15
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 16
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 17
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...|-14.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 18
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| 18.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 19
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com| -6.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 20
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...|  8.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 21
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...| 17.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 22
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com|  0.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 23
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...|  7.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 24
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com| 12.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 25
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...|-17.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 26
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com|  8.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 27
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|-33.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 28
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com| 10.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 29
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com| 29.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 30
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|  4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 31
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...|-20.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 32
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...|-22.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 33
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|-17.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 34
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 35
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 36
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 37
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 38
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 39
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 40
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 41
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 42
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -5.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 43
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 44
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...|  0.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 45
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 46
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...|  2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 47
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| -9.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 48
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com| 13.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 49
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...|-15.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 50
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...| 25.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 51
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com|-15.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 52
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...| -5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 53
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com|  5.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 54
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...|-15.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 55
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com| -7.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 56
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|  4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 57
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com| 22.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 58
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com| 19.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 59
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...| 35.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 60
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...|  1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 61
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...| -8.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 62
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com| 12.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 63
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|-26.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 64
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 65
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 66
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 67
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 68
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 69
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 70
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 71
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -4.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 72
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 73
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...|  0.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 74
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 75
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...| -5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 76
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...|-28.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 77
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com|  2.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 78
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...|  9.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 79
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...| 13.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 80
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com|-29.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 81
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...|-19.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 82
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com|-18.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 83
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...|  6.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 84
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com|-15.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 85
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...| 14.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 86
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com| -7.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 87
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com|  3.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 88
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...| 11.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 89
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...| 13.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 90
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 91
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com| -4.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 92
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|  0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 93
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 94
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 95
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 96
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 97
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 98
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 99
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 100
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -3.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 101
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 102
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 103
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 104
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...| 18.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 105
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...|  0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 106
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com|-16.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 107
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 108
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...|  7.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 109
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com| -8.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 110
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...| -1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 111
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com|-39.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 112
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...| 40.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 113
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com|-23.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 114
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|  3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 115
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com|-16.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 116
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com|  8.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 117
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...| -1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 118
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...| 10.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 119
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...|  8.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 120
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|-16.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 121
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|-14.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 122
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 123
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 124
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 125
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 126
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 127
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 128
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 129
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -2.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 130
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 131
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 132
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 133
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...| -7.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 134
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| -8.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 135
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com|  0.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 136
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...|-22.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 137
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...|-18.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 138
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com| 28.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 139
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...|  3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 140
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com| -5.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 141
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...| 24.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 142
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com| 13.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 143
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|  3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 144
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com|  5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 145
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com| -2.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 146
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|  0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 147
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 148
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...| 10.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 149
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com| 23.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 150
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|-22.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 151
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 152
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 153
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 154
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 155
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 156
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -5.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 157
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 158
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -1.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 159
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 160
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 161
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 162
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...|-39.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 163
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| -6.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 164
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com| 18.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 165
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...| -7.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 166
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...|-47.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 167
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com| 26.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 168
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...| -7.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 169
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com| 31.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 170
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...| -7.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 171
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com| 27.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 172
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 173
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com| 18.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 174
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com| -6.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 175
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|  6.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 176
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...|  5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 177
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...|  8.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 178
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|  0.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 179
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|  9.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 180
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 181
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 182
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 183
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 184
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 185
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 186
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -2.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 187
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -1.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 188
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 189
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 190
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -1.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 191
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...| 12.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 192
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| 19.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 193
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com| 22.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 194
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...| 18.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 195
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...|  0.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 196
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com|  5.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 197
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...|-11.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 198
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com| 15.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 199
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...|-15.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 200
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com|  7.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 201
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|-14.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 202
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 203
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com|-21.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 204
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|-12.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 205
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...|  6.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 206
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...| 25.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 207
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|-45.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 208
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com| 12.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 209
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 210
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 211
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Jefferson@t...| -6.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 212
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Edward.Huey@test.com| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 213
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Sanchez@test...| -3.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 214
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Neeraj.Anderson@t...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 215
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lyn.Aristotle@tes...| -2.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 216
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Gail.Smith@test.com| -2.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 217
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Bobby.Hansen@test...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 218
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Angie.Khatib@test...| -4.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 219
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sarah.Gonzalez@te...| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 220
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Aristotle...| 21.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 221
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Aristotle@...| 26.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 222
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Eric.Doshi@test.com|  9.5|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 223
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Gonzalez@t...| 28.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 224
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Clayton@t...| 32.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 225
+-------------------------------------------
++-------------------+-----+
+|           customer|score|
++-------------------+-----+
+|Dan.Anandh@test.com|-13.0|
++-------------------+-----+
+
+-------------------------------------------
+Batch: 226
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jason.Habschied@t...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 227
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Ben.Jones@test.com|-23.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 228
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Frank.Spencer@tes...|-19.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 229
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|John.Anandh@test.com| -3.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 230
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Sanchez@test...|-17.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 231
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Howard@test.com|  5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 232
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Clark@test.com|-11.0|
++------------------+-----+
+
+-------------------------------------------
+Batch: 233
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Abram@test...|-41.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 234
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Trevor.Jones@test...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 235
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Ashley.Lincoln@te...| 16.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 236
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Dan.Jones@test.com|-13.5|
++------------------+-----+
+
+-------------------------------------------
+Batch: 237
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jerry.Davis@test.com|  9.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 238
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Jones@test...| -5.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 239
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Travis.Howard@tes...| -3.5|
++--------------------+-----+
+
+^CERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/opt/bitnami/python/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 292, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/context.py", line 1195, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o14.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Traceback (most recent call last):
+  File "/home/workspace/pyspark_kafka_event_stream_to_console/sparkpyeventskafkastreamtoconsole.py", line 77, in <module>
+    customerRiskStreamingDF \
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 101, in awaitTermination
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/java_gateway.py", line 1321, in __call__
+  File "/opt/bitnami/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 111, in deco
+  File "/opt/bitnami/spark/python/lib/py4j-0.10.9.3-src.zip/py4j/protocol.py", line 334, in get_return_value
+py4j.protocol.Py4JError: An error occurred while calling o52.awaitTermination
+22/05/07 16:29:44 ERROR WriteToDataSourceV2Exec: Data source write support org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@52a1af7b is aborting.
+22/05/07 16:29:44 ERROR WriteToDataSourceV2Exec: Data source write support org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@52a1af7b aborted.
+22/05/07 16:29:44 ERROR MicroBatchExecution: Query [id = b4fefa05-6f3f-4e09-a3f3-f63f71bea1b1, runId = 3bb6f118-b857-4d2c-a1da-2f35c7039345] terminated with error
+org.apache.spark.SparkException: Writing job aborted
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.writingJobAbortedError(QueryExecutionErrors.scala:613)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2(WriteToDataSourceV2Exec.scala:386)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2$(WriteToDataSourceV2Exec.scala:330)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.writeWithV2(WriteToDataSourceV2Exec.scala:279)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.run(WriteToDataSourceV2Exec.scala:290)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:3715)
+	at org.apache.spark.sql.Dataset.$anonfun$collect$1(Dataset.scala:2971)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3706)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3704)
+	at org.apache.spark.sql.Dataset.collect(Dataset.scala:2971)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:603)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:598)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:598)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:228)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:375)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:373)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:69)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:193)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:57)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:187)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:303)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:286)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:209)
+Caused by: org.apache.spark.SparkException: Job 240 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1166)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1164)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1164)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:2666)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2566)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2086)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1442)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2086)
+	at org.apache.spark.SparkContext.$anonfun$new$38(SparkContext.scala:667)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2019)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:938)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2214)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2(WriteToDataSourceV2Exec.scala:354)
+	... 40 more
+22/05/07 16:29:44 WARN NettyRpcEnv: Ignored failure: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@2b9d7aa1 rejected from java.util.concurrent.ScheduledThreadPoolExecutor@1a27cb01[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+Exception in thread "stream execution thread for [id = b4fefa05-6f3f-4e09-a3f3-f63f71bea1b1, runId = 3bb6f118-b857-4d2c-a1da-2f35c7039345]" org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:103)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:87)
+	at org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef.deactivateInstances(StateStoreCoordinator.scala:119)
+	at org.apache.spark.sql.streaming.StreamingQueryManager.notifyQueryTermination(StreamingQueryManager.scala:402)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$3(StreamExecution.scala:352)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.UninterruptibleThread.runUninterruptibly(UninterruptibleThread.scala:77)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:333)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:209)
+Caused by: org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:176)
+	at org.apache.spark.rpc.netty.Dispatcher.postLocalMessage(Dispatcher.scala:144)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.askAbortable(NettyRpcEnv.scala:242)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.askAbortable(NettyRpcEnv.scala:555)
+	at org.apache.spark.rpc.netty.NettyRpcEndpointRef.ask(NettyRpcEnv.scala:559)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:102)
+	... 8 more
